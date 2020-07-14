@@ -19,4 +19,3 @@ Esse projeto foi desenvolvido no Bootcamp GoStack 11.0 da Rocketseat com as segu
 - [Multer](https://github.com/expressjs/multer)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
 
-Feito com ❤️ por Matheus Pires 👋🏻 [Get in touch!](https://github.com/MatheusPires99)
