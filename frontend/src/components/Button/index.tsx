@@ -1,11 +1,19 @@
-import React, { ButtonHTMLAttributes, Children } from 'react';
-import { Container } from './styles';
+import React, { ButtonHTMLAttributes } from "react";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+import Spinner from "../Spinner";
 
-const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
-  <Container type="button" {...rest}>
-    {children}
-  </Container>
-);
+import { Container } from "./styles";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  loading?: boolean;
+}
+
+const Button: React.FC<ButtonProps> = ({ loading, children, ...rest }) => {
+  return (
+    <Container type="button" {...rest}>
+      {loading ? <Spinner /> : children}
+    </Container>
+  );
+};
+
 export default Button;
