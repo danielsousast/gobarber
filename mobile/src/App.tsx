@@ -7,16 +7,20 @@ import AuthRoutes from './routes';
 import { NavigationContainer } from '@react-navigation/native';
 
 const App: React.FC = () => {
-  return (
-    <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor="#282A36" />
-      <AppProvider>
-         <View style={{ flex: 1, backgroundColor: '#282A36' }}>
-         <AuthRoutes />
-         </View>
-      </AppProvider>
-    </NavigationContainer>
-  );
+   return (
+      <NavigationContainer>
+         <StatusBar
+            barStyle="light-content"
+            backgroundColor="#282A36"
+            translucent
+         />
+         <AppProvider>
+            <View style={{ flex: 1, backgroundColor: '#282A36' }}>
+               <AuthRoutes />
+            </View>
+         </AppProvider>
+      </NavigationContainer>
+   );
 };
 
 export default App;
